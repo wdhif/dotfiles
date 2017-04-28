@@ -1,38 +1,80 @@
-" require config
-runtime! config/**/*.vim
+" Required options
+set nocompatible
+filetype off
 
 " Settings
-set nocompatible
 set visualbell
 set number
 set laststatus=2
 syntax on
-set background=dark
 
-" Filetypes
-filetype off
-filetype plugin indent on
-
-
-" Indentation
-set expandtab
-set smarttab
-set autoindent
-set shiftwidth=2
-set softtabstop=2
-set splitbelow
-
-" Vundle
+" Set runtime path and initialize Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
 " Custom plugins
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'chriskempson/base16-vim'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-sensible'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
+" Finish Vundle set up
 call vundle#end()
+filetype plugin indent on
 
+"
+" General settings
+"
+
+" Remove duplicate information in status bar
+set noshowcmd
+set noshowmode
+
+" Set up colors
+set t_Co&
+set background=dark
+let base16colorspace = 256
+
+colorscheme base16-spacemacs
+
+" Show line numbers
+set number
+
+" Use spaces for indendation
+set expandtab
+set shiftround
+set shiftwidth=2
+set tabstop=2
+
+" Show extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
+
+"
+" Plugin configuration
+"
+
+" vim-airline
+let g:airline_theme = 'base16_spacemacs'
+" let g:airline_powerline_fonts = 1
+let g:airline#extensions#ctrlp#color_template = 'normal'
+let g:airline#extensions#tmuxline#enabled = 0
+
+" vim-tmuxline
+let g:tmuxline_preset = {
+  \'a': '#T',
+  \'win': ['#I', '#W'],
+  \'cwin': ['#I', '#W'],
+  \'z': '%R',
+  \'options': {
+    \'status-justify': 'right'}
+  \}

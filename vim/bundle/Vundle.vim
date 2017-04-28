@@ -1,1 +1,0 @@
-/vagrant/dotfiles/lib/Vundle.vim

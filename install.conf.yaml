@@ -1,0 +1,12 @@
+- clean:
+    - "~"
+- link:
+    ~/.vim/bundle/Vundle.vim:
+      create: true
+      path: 'lib/Vundle.vim'
+    ~/.tmux.conf: 'tmux/tmux.conf'
+    ~/.vim: 'vim'
+    ~/.vimrc: 'vim/vimrc'
+    ~/.config/fish:
+        create: true
+        path: 'fish'

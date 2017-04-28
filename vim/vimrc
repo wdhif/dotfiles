@@ -36,6 +36,3 @@ Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
-" Colorscheme
-colorscheme solarized
-

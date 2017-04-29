@@ -1,5 +1,7 @@
 - clean:
     - "~"
+- shell:
+  - [git submodule update --init --recursive lib/, Installing submodules]
 - link:
     ~/.vim:
       force: true
@@ -14,3 +16,5 @@
     ~/.config/fish:
         create: true
         path: 'fish'
+- shell:
+  - [vim +PluginInstall +qall, Installing vim plugins]

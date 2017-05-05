@@ -7,29 +7,12 @@ set visualbell
 set number
 set laststatus=2
 syntax on
+set ttimeoutlen=50
 
-" Set runtime path and initialize Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-" Custom plugins
-Plugin 'chriskempson/base16-vim'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-sensible'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" Finish Vundle set up
-call vundle#end()
-filetype plugin indent on
+" Load pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
 
 "
 " General settings

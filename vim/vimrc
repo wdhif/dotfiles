@@ -1,6 +1,6 @@
 " Required options
 set nocompatible
-filetype off
+filetype plugin on
 
 " Settings
 set visualbell

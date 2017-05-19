@@ -1,3 +1,10 @@
 [color]
   ui = auto
 
+[user]
+  name = Wassim DHIF
+  email = wassimdhif@gmail.com
+
+[core]
+  editor = vim
+

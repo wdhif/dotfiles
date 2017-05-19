@@ -16,3 +16,4 @@
     ~/.gitconfig:
       create: true
       path: 'git/gitconfig'
+

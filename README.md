@@ -12,5 +12,5 @@ Plugins are managed with [Pathogen.vim](https://github.com/tpope/vim-pathogen). 
 git submodule add PLUGIN_GIT_REPO vim/bundle/PLUGIN_NAME
 ```
 Where PLUGIN_GIT_REPO is the url of the git repository of a plugin and PLUGIN_NAME must be the same as the one in the git repository url.
-EG. `git submodule add https://github.com/tpope/vim-pathogen.git vim-pathogen`
+EG. `git submodule add https://github.com/tpope/vim-pathogen.git vim/bundle/vim-pathogen`
 

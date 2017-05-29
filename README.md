@@ -1,4 +1,6 @@
 # .files
+[![Build Status](https://travis-ci.org/wdhif/dotfiles.svg?branch=master)](https://travis-ci.org/wdhif/dotfiles)
+
 :zap:curl -L https://git.io/wdhifdotfiles | bash:zap:  
 After cloning this repo, run `install` to automatically set up the development
 environment. Note that the install script is idempotent: it can safely be run

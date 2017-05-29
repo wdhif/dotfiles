@@ -8,6 +8,7 @@ set number
 set laststatus=2
 syntax on
 set ttimeoutlen=50
+set updatetime=250
 
 " Load pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim

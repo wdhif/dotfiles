@@ -57,3 +57,7 @@
   path = vim/bundle/vim-json
   url = https://github.com/elzr/vim-json.git
   ignore = untracked
+[submodule "vim/bundle/vim-multiple-cursors.git"]
+  path = vim/bundle/vim-multiple-cursors.git
+  url = https://github.com/terryma/vim-multiple-cursors.git
+  ignore = untracked

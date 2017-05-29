@@ -11,9 +11,8 @@
       force: true
       path: 'vim/vimrc'
     ~/.config/fish:
-        create: true
-        path: 'fish'
-    ~/.gitconfig:
       create: true
+      path: 'fish'
+    ~/.gitconfig:
+      force: true
       path: 'git/gitconfig'
-

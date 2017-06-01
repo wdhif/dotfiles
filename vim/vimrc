@@ -1,23 +1,18 @@
+"
+" General settings
+"
+
 " Required options
 set nocompatible
 filetype plugin on
 
 " Settings
+syntax on
 set visualbell
 set number
 set laststatus=2
-syntax on
 set ttimeoutlen=50
 set updatetime=250
-
-" Load pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
-
-"
-" General settings
-"
 
 " Remove duplicate information in status bar
 set noshowcmd
@@ -28,11 +23,6 @@ set t_Co&
 set background=dark
 let base16colorspace = 256
 
-colorscheme base16-spacemacs
-
-" Show line numbers
-set number
-
 " Use spaces for indendation
 set expandtab
 set shiftround
@@ -42,14 +32,20 @@ set tabstop=2
 " Show extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
-
 "
 " Plugin configuration
 "
 
+" Load pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+
+colorscheme base16-spacemacs
+
 " vim-airline
 let g:airline_theme = 'base16_spacemacs'
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#ctrlp#color_template = 'normal'
 let g:airline#extensions#tmuxline#enabled = 0
 

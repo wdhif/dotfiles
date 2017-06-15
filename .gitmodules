@@ -53,3 +53,7 @@
   path = vim/bundle/vim-multiple-cursors.git
   url = https://github.com/terryma/vim-multiple-cursors.git
   ignore = untracked
+[submodule "vim/bundle/supertab"]
+  path = vim/bundle/supertab
+  url = https://github.com/ervandew/supertab.git
+  ignore = untracked

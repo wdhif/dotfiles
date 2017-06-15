@@ -13,7 +13,6 @@ set number
 set laststatus=2
 set ttimeoutlen=50 " Fix delay at mode change
 set updatetime=250 " Fix delay at mode change
-set formatoptions-=cro " Disable automatic comment insertion
 
 " Remove duplicate information in status bar
 set noshowcmd

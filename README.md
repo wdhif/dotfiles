@@ -16,6 +16,12 @@ git submodule add PLUGIN_GIT_REPO vim/bundle/PLUGIN_NAME
 Where PLUGIN_GIT_REPO is the url of the git repository of a plugin and PLUGIN_NAME must be the same as the one in the git repository url.
 EG. `git submodule add https://github.com/tpope/vim-pathogen.git vim/bundle/vim-pathogen`
 
+## Remove a Vim plugin
+Remove the git module in `.gitmodules` and remove the vim plugin directory
+```
+git rm vim/bundle/PLUGIN_NAME
+```
+
 ## Update git submodules
 Vim plugins and Dotbot are managed using git submodules. To update submodules you can do the following.
 ```

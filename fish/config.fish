@@ -22,4 +22,5 @@ alias free "free -mth"
 alias fhere "find . -name"
 alias mkdir "mkdir -pv"
 alias wget "wget -c"
+alias more "less"
 

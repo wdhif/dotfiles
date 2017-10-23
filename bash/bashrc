@@ -18,7 +18,7 @@ if [ -f ~/.bash_profile ]; then
 fi
 
 # ls aliases
-alias ls="ls --color=auto"
+alias ls="ls -G"
 alias ll="ls -alF"
 alias la="ls -lha"
 alias l="ls -CF"

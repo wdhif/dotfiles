@@ -34,7 +34,5 @@ alias wget="wget -c"
 alias more="less"
 
 # source functions
-for file in ~/.bin/* ; do
-  source "$file"
-done
+PATH=$PATH:~/.bin
 

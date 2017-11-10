@@ -34,5 +34,5 @@ alias wget="wget -c"
 alias more="less"
 
 # source functions
-PATH=$PATH:~/.bin
+PATH=$PATH:~/.bin:~/.bin/ovh
 

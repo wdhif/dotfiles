@@ -12,11 +12,6 @@ export PS1="\n\u@\h:\W\$(parse_git_branch)\n\\$> "
 # Aliases #
 ###########
 
-# Profile specific aliases
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # ls aliases
 alias ls="ls -G"
 alias ll="ls -alF"
@@ -32,6 +27,16 @@ alias fhere="find . -name"
 alias mkdir="mkdir -pv"
 alias wget="wget -c"
 alias more="less"
+
+# Private specific aliases
+if [ -f ~/.bash_private ]; then
+    . ~/.bash_private
+fi
+
+# Work specific aliases
+if [ -f ~/.bash_work ]; then
+    . ~/.bash_work
+fi
 
 # source functions
 PATH=$PATH:~/.bin:~/.bin/ovh

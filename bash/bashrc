@@ -38,6 +38,12 @@ if [ -f ~/.bash_work ]; then
     . ~/.bash_work
 fi
 
-# source functions
-PATH=$PATH:~/.bin:~/.bin/ovh
+# Custom functions
+PATH=$PATH:~/.bin
+
+# Homebrew binaries
+PATH=$PATH:~/.homebrew/bin
+
+# OVH functions
+PATH=$PATH:~/.bin/ovh
 

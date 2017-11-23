@@ -38,6 +38,9 @@ if [ -f ~/.bash_work ]; then
     . ~/.bash_work
 fi
 
+# macOS local bin
+PATH=$PATH:/usr/local/bin
+
 # Custom functions
 PATH=$PATH:~/.bin
 

@@ -21,6 +21,9 @@
     ~/.gitconfig:
       force: true
       path: 'git/gitconfig'
+    ~/.gitignore:
+      force: true
+      path: 'git/gitignore'
     ~/.bin:
       force: true
       path: 'bin'

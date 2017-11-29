@@ -57,3 +57,6 @@
   path = vim/bundle/vim-gitgutter
   url = git://github.com/airblade/vim-gitgutter.git
 
+[submodule "vim/bundle/vim-colors-solarized"]
+  path = vim/bundle/vim-colors-solarized
+  url = git://github.com/altercation/vim-colors-solarized.git

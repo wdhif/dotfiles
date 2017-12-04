@@ -14,6 +14,7 @@ set laststatus=2
 set nowrap
 set ttimeoutlen=50 " Fix delay at mode change
 set updatetime=250 " Fix delay at mode change
+set mouse=a
 
 " Remove duplicate information in status bar
 set noshowcmd

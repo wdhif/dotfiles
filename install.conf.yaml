@@ -6,6 +6,9 @@
     ~/.vim:
       force: true
       path: 'vim'
+    ~/.tmux:
+      force: true
+      path: 'tmux'
     ~/.tmux.conf:
       force: true
       path: 'tmux/tmux.conf'

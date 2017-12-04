@@ -1,6 +1,11 @@
 [submodule "lib/dotbot"]
   path = lib/dotbot
   url = https://github.com/anishathalye/dotbot
+  ignore = untracked
+[submodule "tmux/plugins/tpm"]
+  path = tmux/plugins/tpm
+  url = https://github.com/tmux-plugins/tpm
+  ignore = untracked
 [submodule "vim/bundle/vim-pathogen"]
   path = vim/bundle/vim-pathogen
   url = https://github.com/tpope/vim-pathogen.git
@@ -56,7 +61,8 @@
 [submodule "vim/bundle/vim-gitgutter"]
   path = vim/bundle/vim-gitgutter
   url = git://github.com/airblade/vim-gitgutter.git
-
+  ignore = untracked
 [submodule "vim/bundle/vim-colors-solarized"]
   path = vim/bundle/vim-colors-solarized
   url = git://github.com/altercation/vim-colors-solarized.git
+  ignore = untracked

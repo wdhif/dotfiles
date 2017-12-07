@@ -1,3 +1,14 @@
+####################
+# General settings #
+####################
+
+# Detect which 'ls' flavor is in use
+if [[ $OSTYPE == 'linux-gnu' ]]; then
+  colorflag='--color'
+elif [[ $OSTYPE == 'darwin'* ]]; then
+  colorflag="-G"
+fi
+
 ##########
 # Prompt #
 ##########
@@ -12,8 +23,14 @@ export PS1="\n\u@\h:\W\$(parse_git_branch)\n\\$> "
 # Aliases #
 ###########
 
+# cd aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 # ls aliases
-alias ls="ls -G"
+alias ls="ls ${colorflag}"
 alias ll="ls -alF"
 alias la="ls -lha"
 alias l="ls -CF"
@@ -22,11 +39,20 @@ alias l="ls -CF"
 alias df="df -Tha --total"
 alias free="free -mth"
 
-# Other aliases
+# Utility aliases
 alias fhere="find . -name"
 alias mkdir="mkdir -pv"
 alias wget="wget -c"
 alias more="less"
+alias jsonbeautify="python -m json.tool"
+
+# Darwin aliases
+if [[ $OSTYPE == 'darwin'* ]]; then
+  alias lock="pmset displaysleepnow"
+fi
+
+# Sanity aliases
+alias dokcer="docker"
 
 # Private specific aliases
 if [ -f ~/.bash_private ]; then
@@ -37,6 +63,10 @@ fi
 if [ -f ~/.bash_work ]; then
     . ~/.bash_work
 fi
+
+########
+# Path #
+########
 
 # macOS local bin
 PATH=$PATH:/usr/local/bin

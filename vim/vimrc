@@ -14,7 +14,12 @@ set laststatus=2
 set nowrap
 set ttimeoutlen=50 " Fix delay at mode change
 set updatetime=250 " Fix delay at mode change
-set mouse=a
+set ttyfast "Assume fast terminal connection
+set autoread "Auto reload if file saved externally
+
+" Mouse settings
+set mouse=a " Enable mouse
+set mousehide " Hide mouse while typing
 
 " Remove duplicate information in status bar
 set noshowcmd

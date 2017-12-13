@@ -46,6 +46,7 @@ alias wget="wget -c"
 alias more="less"
 alias jsonbeautify="python -m json.tool"
 alias sshb0t="docker run -d --restart always --name sshb0t -v ${HOME}/.ssh/authorized_keys:/root/.ssh/authorized_keys r.j3ss.co/sshb0t --user wdhif"
+alias ctop="docker run --rm -it --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
 
 # Darwin aliases
 if [[ $OSTYPE == 'darwin'* ]]; then

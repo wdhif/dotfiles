@@ -44,11 +44,9 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Set up theme
-colorscheme solarized
 set background=dark
 
 " vim-airline
-let g:airline_theme = 'solarized'
 let g:airline_solarized_bg = 'dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ctrlp#color_template = 'normal'

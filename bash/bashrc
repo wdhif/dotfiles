@@ -82,3 +82,11 @@ PATH=$PATH:~/.homebrew/bin
 # OVH functions
 PATH=$PATH:~/.bin/ovh
 
+# Go Path
+if [[ $OSTYPE == 'darwin'* ]]; then
+  export GOROOT=/Users/wdhif/.homebrew/Cellar/go/1.9.4/libexec
+  export GOPATH=/Users/wdhif/Projets/go/
+  PATH=$PATH:$GOPATH/bin
+  PATH=$PATH:$GOROOT/bin
+fi
+

@@ -77,7 +77,9 @@ PATH=$PATH:/usr/local/bin
 PATH=$PATH:~/.bin
 
 # Homebrew binaries
-PATH=$PATH:~/.homebrew/bin
+if [[ $OSTYPE == 'darwin'* ]]; then
+  PATH=~/.homebrew/bin:$PATH
+fi
 
 # OVH functions
 PATH=$PATH:~/.bin/ovh

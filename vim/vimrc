@@ -9,6 +9,7 @@ filetype plugin on
 " Various settings
 syntax on
 set visualbell
+set t_vb= " Disable visualbell
 set number
 set laststatus=2
 set nowrap

@@ -11,6 +11,7 @@ syntax on
 set visualbell
 set t_vb= " Disable visualbell
 set number
+set cursorline
 set laststatus=2
 set nowrap
 set ttimeoutlen=50 " Fix delay at mode change

@@ -47,6 +47,10 @@ alias more="less"
 alias jsonbeautify="python -m json.tool"
 alias sshb0t="docker run -d --restart always --name sshb0t -v ${HOME}/.ssh/authorized_keys:/root/.ssh/authorized_keys r.j3ss.co/sshb0t --user wdhif"
 alias ctop="docker run --rm -it --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
+alias python2="\python"
+alias pip2="\pip"
+alias python="python3"
+alias pip="pip3"
 
 # Darwin aliases
 if [[ $OSTYPE == 'darwin'* ]]; then
@@ -70,24 +74,20 @@ fi
 # Path #
 ########
 
-# macOS local bin
-PATH=$PATH:/usr/local/bin
-
 # Custom functions
 PATH=$PATH:~/.bin
-
-# Homebrew binaries
-if [[ $OSTYPE == 'darwin'* ]]; then
-  PATH=~/.homebrew/bin:$PATH
-fi
 
 # OVH functions
 PATH=$PATH:~/.bin/ovh
 
-# Go Path
+# macOS specific path
 if [[ $OSTYPE == 'darwin'* ]]; then
-  export GOROOT=/Users/wdhif/.homebrew/Cellar/go/1.9.4/libexec
-  export GOPATH=/Users/wdhif/Projets/go/
+  PATH=~/.homebrew/bin:$PATH # Homebrew binaries before default macOS binaries
+  PATH=$PATH:/usr/local/bin # local binaries
+  PATH=$PATH:${HOME}/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+  # Go path
+  export GOROOT=${HOME}/.homebrew/Cellar/go/1.10.2/libexec
+  export GOPATH=${HOME}/Projets/go/
   PATH=$PATH:$GOPATH/bin
   PATH=$PATH:$GOROOT/bin
 fi

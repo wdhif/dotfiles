@@ -46,10 +46,6 @@
   path = vim/bundle/vim-commentary
   url = https://github.com/tpope/vim-commentary.git
   ignore = untracked
-[submodule "vim/bundle/indentLine"]
-  path = vim/bundle/indentLine
-  url = https://github.com/Yggdroot/indentLine.git
-  ignore = untracked
 [submodule "vim/bundle/vim-multiple-cursors.git"]
   path = vim/bundle/vim-multiple-cursors.git
   url = https://github.com/terryma/vim-multiple-cursors.git

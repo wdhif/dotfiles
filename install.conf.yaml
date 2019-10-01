@@ -12,6 +12,9 @@
     ~/.tmux.conf:
       force: true
       path: 'tmux/tmux.conf'
+    ~/.tmux.conf.local:
+      force: true
+      path: 'tmux/tmux.conf.local'
     ~/.bashrc:
       force: true
       path: 'bash/bashrc'

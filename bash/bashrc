@@ -58,6 +58,7 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 fi
 
 # Sanity aliases
+alias sl="ls"
 alias dokcer="docker"
 
 # Private specific aliases

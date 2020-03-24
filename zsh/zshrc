@@ -1,0 +1,101 @@
+####################
+# General settings #
+####################
+
+# Detect which 'ls' flavor is in use
+if [[ $OSTYPE == 'linux-gnu' ]]; then
+  colorflag='--color'
+elif [[ $OSTYPE == 'darwin'* ]]; then
+  colorflag="-G"
+fi
+
+##########
+# Prompt #
+##########
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PROMPT="%n@%m:%~> "
+#export PS1="\n\u@\h:\W\$(parse_git_branch)\n\\$> "
+
+###########
+# Aliases #
+###########
+
+# cd aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# ls aliases
+alias ls="ls ${colorflag}"
+alias ll="ls -alF"
+alias la="ls -lha"
+alias l="ls -CF"
+
+# System aliases
+alias df="df -Tha --total"
+alias free="free -mth"
+
+# Utility aliases
+alias fhere="find . -name"
+alias mkdir="mkdir -pv"
+alias wget="wget -c"
+alias more="less"
+alias jsonbeautify="python -m json.tool"
+alias sshb0t="docker run -d --restart always --name sshb0t -v ${HOME}/.ssh/authorized_keys:/root/.ssh/authorized_keys r.j3ss.co/sshb0t --user wdhif"
+alias ctop="docker run --rm -it --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
+alias python2="\python"
+alias pip2="\pip"
+alias python="python3"
+alias pip="pip3"
+
+# Darwin aliases
+if [[ $OSTYPE == 'darwin'* ]]; then
+  alias lock="pmset displaysleepnow"
+fi
+
+# Sanity aliases
+alias sl="ls"
+alias dokcer="docker"
+
+# Private specific aliases
+if [ -f ~/.bash_private ]; then
+    . ~/.bash_private
+fi
+
+# Work specific aliases
+if [ -f ~/.bash_work ]; then
+    . ~/.bash_work
+fi
+
+########
+# Path #
+########
+
+# Custom functions
+PATH=$PATH:~/.bin
+
+# OVH functions
+PATH=$PATH:~/.bin/ovh
+
+# Go path
+export GOPATH=$HOME/Projets/go
+
+# macOS specific path
+if [[ $OSTYPE == 'darwin'* ]]; then
+  PATH=~/.homebrew/bin:$PATH # Homebrew binaries before default macOS binaries
+  PATH=~/.homebrew/sbin:$PATH # Homebrew superuser binaries before default macOS binaries
+  PATH=~/.homebrew/opt/ruby/bin:$PATH # Use Homebrew Ruby binaries
+  PATH=$PATH:/usr/local/bin # local binaries
+  PATH=$PATH:${HOME}/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+  # Go path
+  export GOROOT=${HOME}/.homebrew/Cellar/go/1.10.2/libexec
+  export GOPATH=${HOME}/Projets/go/
+  PATH=$PATH:$GOPATH/bin
+  PATH=$PATH:$GOROOT/bin
+fi
+

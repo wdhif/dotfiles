@@ -18,6 +18,9 @@
     ~/.bashrc:
       force: true
       path: 'bash/bashrc'
+    ~/.zshrc:
+      force: true
+      path: 'zsh/zshrc'
     ~/.vimrc:
       force: true
       path: 'vim/vimrc'

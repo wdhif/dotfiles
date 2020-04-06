@@ -5,8 +5,8 @@
 # Custom functions
 PATH=$PATH:~/.bin
 
-# OVH functions
-PATH=$PATH:~/.bin/ovh
+# Work functions
+PATH=$PATH:~/.bin/work
 
 # Go path
 export GOPATH=$HOME/Projets/go

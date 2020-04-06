@@ -1,0 +1,8 @@
+puppet_sed () {
+  if [ -z "$1" ]
+  then
+    echo $(parse_git_branch) | sed "s/[()]//g" |sed "s/[^[:alpha:][:digit:]_]/_/g"
+  else
+    echo $1 | sed "s/[^[:alpha:][:digit:]_]/_/g"
+  fi
+}

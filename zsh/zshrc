@@ -1,101 +1,99 @@
-####################
-# General settings #
-####################
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Detect which 'ls' flavor is in use
-if [[ $OSTYPE == 'linux-gnu' ]]; then
-  colorflag='--color'
-elif [[ $OSTYPE == 'darwin'* ]]; then
-  colorflag="-G"
-fi
+# Path to your oh-my-zsh installation.
+export ZSH="${HOME}/.oh-my-zsh"
 
-##########
-# Prompt #
-##########
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-export PROMPT="%n@%m:%~> "
-#export PS1="\n\u@\h:\W\$(parse_git_branch)\n\\$> "
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-###########
-# Aliases #
-###########
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-# cd aliases
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-# ls aliases
-alias ls="ls ${colorflag}"
-alias ll="ls -alF"
-alias la="ls -lha"
-alias l="ls -CF"
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
-# System aliases
-alias df="df -Tha --total"
-alias free="free -mth"
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-# Utility aliases
-alias fhere="find . -name"
-alias mkdir="mkdir -pv"
-alias wget="wget -c"
-alias more="less"
-alias jsonbeautify="python -m json.tool"
-alias sshb0t="docker run -d --restart always --name sshb0t -v ${HOME}/.ssh/authorized_keys:/root/.ssh/authorized_keys r.j3ss.co/sshb0t --user wdhif"
-alias ctop="docker run --rm -it --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
-alias python2="\python"
-alias pip2="\pip"
-alias python="python3"
-alias pip="pip3"
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
-# Darwin aliases
-if [[ $OSTYPE == 'darwin'* ]]; then
-  alias lock="pmset displaysleepnow"
-fi
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-# Sanity aliases
-alias sl="ls"
-alias dokcer="docker"
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# Private specific aliases
-if [ -f ~/.bash_private ]; then
-    . ~/.bash_private
-fi
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-# Work specific aliases
-if [ -f ~/.bash_work ]; then
-    . ~/.bash_work
-fi
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-########
-# Path #
-########
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Custom functions
-PATH=$PATH:~/.bin
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
 
-# OVH functions
-PATH=$PATH:~/.bin/ovh
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Go path
-export GOPATH=$HOME/Projets/go
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
 
-# macOS specific path
-if [[ $OSTYPE == 'darwin'* ]]; then
-  PATH=~/.homebrew/bin:$PATH # Homebrew binaries before default macOS binaries
-  PATH=~/.homebrew/sbin:$PATH # Homebrew superuser binaries before default macOS binaries
-  PATH=~/.homebrew/opt/ruby/bin:$PATH # Use Homebrew Ruby binaries
-  PATH=$PATH:/usr/local/bin # local binaries
-  PATH=$PATH:${HOME}/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
-  # Go path
-  export GOROOT=${HOME}/.homebrew/Cellar/go/1.10.2/libexec
-  export GOPATH=${HOME}/Projets/go/
-  PATH=$PATH:$GOPATH/bin
-  PATH=$PATH:$GOROOT/bin
-fi
+source $ZSH/oh-my-zsh.sh
 
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"

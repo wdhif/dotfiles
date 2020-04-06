@@ -2,6 +2,8 @@
     - "~"
 - shell:
   - [git submodule update --init --recursive vim/bundle/, Installing plugins]
+- create:
+  - ~/.oh-my-zsh
 - link:
     ~/.vim:
       force: true
@@ -21,6 +23,9 @@
     ~/.zshrc:
       force: true
       path: 'zsh/zshrc'
+    ~/.oh-my-zsh/custom:
+      force: true
+      path: 'zsh/custom'
     ~/.vimrc:
       force: true
       path: 'vim/vimrc'

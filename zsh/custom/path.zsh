@@ -15,6 +15,7 @@ export GOPATH=$HOME/Projets/go
 if [[ $OSTYPE == 'darwin'* ]]; then
   PATH=~/.homebrew/bin:$PATH # Homebrew binaries before default macOS binaries
   PATH=~/.homebrew/sbin:$PATH # Homebrew superuser binaries before default macOS binaries
+  PATH=~/Library/Python/3.7/bin:$PATH # Use Homebrew Python binaries
   PATH=~/.homebrew/opt/ruby/bin:$PATH # Use Homebrew Ruby binaries
   PATH=$PATH:/usr/local/bin # local binaries
   PATH=$PATH:${HOME}/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin

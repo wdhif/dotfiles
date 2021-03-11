@@ -6,6 +6,9 @@
 	editor = vim
 	excludesfile = ~/.gitignore
 
+[includeIf "gitdir:~/Projets/work/"]
+	path = ~/Projets/work/.gitconfig
+
 [branch]
 	autosetupmerge = always
 	autosetuprebase = always

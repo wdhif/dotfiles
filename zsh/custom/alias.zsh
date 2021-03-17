@@ -9,7 +9,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Detect which 'ls' flavor is in use
-if [[ $OSTYPE == 'linux-gnu' ]]; then
+if [[ $OSTYPE == 'linux-gnu'* ]]; then
   colorflag='--color'
 elif [[ $OSTYPE == 'darwin'* ]]; then
   colorflag="-G"

@@ -16,8 +16,8 @@ set laststatus=2
 set nowrap
 set ttimeoutlen=50 " Fix delay at mode change
 set updatetime=250 " Fix delay at mode change
-set ttyfast "Assume fast terminal connection
-set autoread "Auto reload if file saved externally
+set ttyfast " Assume fast terminal connection
+set autoread " Auto reload if file saved externally
 
 " Mouse settings
 set mouse=a " Enable mouse
@@ -65,7 +65,7 @@ let g:syntastic_sh_shellcheck_args="-x"
 
 " vim-airline
 let g:airline_solarized_bg = 'dark'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#ctrlp#color_template = 'normal'
 let g:airline#extensions#tmuxline#enabled = 0
 

@@ -15,6 +15,9 @@ export GOPATH=$HOME/Projets/go
 if [[ $OSTYPE == 'darwin'* ]]; then
   PATH=~/.homebrew/bin:$PATH # Homebrew binaries before default macOS binaries
   PATH=~/.homebrew/sbin:$PATH # Homebrew superuser binaries before default macOS binaries
+  NVM_DIR="$HOME/.nvm"  # Add nvm directory
+  [ -s "/Users/wdhif/.homebrew/opt/nvm/nvm.sh" ] && . "/Users/wdhif/.homebrew/opt/nvm/nvm.sh"  # Load nvm
+  [ -s "/Users/wdhif/.homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/Users/wdhif/.homebrew/opt/nvm/etc/bash_completion.d/nvm"  # Load nvm completion
   PATH=~/Library/Python/3.7/bin:$PATH # Use Homebrew Python binaries
   PATH=~/.homebrew/opt/ruby/bin:$PATH # Use Homebrew Ruby binaries
   PATH=$PATH:/usr/local/bin # local binaries

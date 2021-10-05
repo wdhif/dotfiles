@@ -1,4 +1,5 @@
 # .files
+![](https://github.com/wdhif/dotfiles/actions/workflows/main.yml/badge.svg)
 
 :zap:curl -L https://git.io/wdhifdotfiles | bash:zap:  
 After cloning this repo, run `install` to automatically set up the development

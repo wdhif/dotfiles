@@ -9,6 +9,9 @@ elif [[ $OSTYPE == 'darwin'* ]]; then
   colorflag="-G"
 fi
 
+# Export GPG_TTY environment variable
+export GPG_TTY=$(tty)
+
 ##########
 # Prompt #
 ##########

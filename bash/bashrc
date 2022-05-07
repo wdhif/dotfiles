@@ -16,7 +16,7 @@ export GPG_TTY=$(tty)
 # Prompt #
 ##########
 
-export PS1="\n\u@\h:\W\$(parse_git_branch)\n\\$> "
+export PS1="\n\u@\h:\W\\n\\$> "
 
 ###########
 # Aliases #

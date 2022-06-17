@@ -37,6 +37,7 @@ alias python2="\python"
 alias pip2="\pip"
 alias python="python3"
 alias pip="pip3"
+alias venv="source ~/Projets/venv/bin/activate"
 
 # Darwin aliases
 if [[ $OSTYPE == 'darwin'* ]]; then

@@ -4,6 +4,7 @@
   - [git submodule update --init --recursive vim/bundle/, Installing plugins]
 - create:
   - ~/.oh-my-zsh
+  - ~/.zsh
 - link:
     ~/.vim:
       force: true
@@ -23,7 +24,7 @@
     ~/.zshrc:
       force: true
       path: 'zsh/zshrc'
-    ~/.oh-my-zsh/custom:
+    ~/.zsh/custom:
       force: true
       path: 'zsh/custom'
     ~/.vimrc:

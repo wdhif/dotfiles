@@ -23,7 +23,7 @@ if [[ $OSTYPE == 'darwin'* ]]; then
   PATH=$PATH:/usr/local/bin # local binaries
   PATH=$PATH:${HOME}/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
   # Go path
-  export GOROOT=${HOME}/.homebrew/Cellar/go/1.16/libexec
+  export GOROOT=${HOME}/.homebrew/opt/go/libexec
   export GOPATH=${HOME}/Projets/go/
   PATH=$PATH:$GOPATH/bin
   PATH=$PATH:$GOROOT/bin

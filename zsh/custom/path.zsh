@@ -13,6 +13,8 @@ export GOPATH=$HOME/Projets/go
 
 # macOS specific path
 if [[ $OSTYPE == 'darwin'* ]]; then
+  PATH=/opt/homebrew/bin:$PATH # Homebrew default location binaries before default macOS binaries
+  PATH=/opt/homebrew/sbin:$PATH # Homebrew default location superuser binaries before default macOS binaries
   PATH=~/.homebrew/bin:$PATH # Homebrew binaries before default macOS binaries
   PATH=~/.homebrew/sbin:$PATH # Homebrew superuser binaries before default macOS binaries
   NVM_DIR="$HOME/.nvm"  # Add nvm directory

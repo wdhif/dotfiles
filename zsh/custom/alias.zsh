@@ -31,6 +31,8 @@ alias pip2="\pip"
 alias python="python3"
 alias pip="pip3"
 alias venv="source ~/Projets/venv/bin/activate"
+alias k="kubectl"
+alias mk="minikube"
 
 # Darwin aliases
 if [[ $OSTYPE == 'darwin'* ]]; then

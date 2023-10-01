@@ -11,3 +11,10 @@ if [[ $OSTYPE == 'darwin'* ]]; then
   bindkey "[C" forward-word
 fi
 
+# Autocompletions
+autoload -Uz compinit
+compinit
+
+source <(kubectl completion zsh)
+source <(minikube completion zsh)
+source <(helm completion zsh)

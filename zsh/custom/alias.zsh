@@ -8,15 +8,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Detect which 'ls' flavor is in use
-if [[ $OSTYPE == 'linux-gnu'* ]]; then
-  colorflag='--color'
-elif [[ $OSTYPE == 'darwin'* ]]; then
-  colorflag="-G"
-fi
-
 # ls aliases
-alias ls="ls ${colorflag}"
+alias ls="ls --color"
 alias ll="ls -alF"
 alias la="ls -lha"
 alias l="ls -CF"

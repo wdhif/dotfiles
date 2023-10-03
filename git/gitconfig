@@ -6,6 +6,9 @@
 	editor = vim
 	excludesfile = ~/.gitignore
 
+[includeIf "gitdir:~/Projects/work/"]
+	path = ~/Projects/work/.gitconfig
+
 [includeIf "gitdir:~/Projets/work/"]
 	path = ~/Projets/work/.gitconfig
 

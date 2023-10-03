@@ -17,6 +17,7 @@ if [[ $OSTYPE == 'darwin'* ]]; then
   PATH=/opt/homebrew/sbin:$PATH # Homebrew default location superuser binaries before default macOS binaries
   PATH=~/.homebrew/bin:$PATH # Homebrew binaries before default macOS binaries
   PATH=~/.homebrew/sbin:$PATH # Homebrew superuser binaries before default macOS binaries
+  PATH=~/.local/bin:$PATH
   NVM_DIR="$HOME/.nvm"  # Add nvm directory
   [ -s "/Users/wdhif/.homebrew/opt/nvm/nvm.sh" ] && . "/Users/wdhif/.homebrew/opt/nvm/nvm.sh"  # Load nvm
   [ -s "/Users/wdhif/.homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/Users/wdhif/.homebrew/opt/nvm/etc/bash_completion.d/nvm"  # Load nvm completion

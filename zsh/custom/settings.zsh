@@ -15,6 +15,7 @@ fi
 autoload -Uz compinit
 compinit
 
+source <(docker completion zsh)
+source <(helm completion zsh)
 source <(kubectl completion zsh)
 source <(minikube completion zsh)
-source <(helm completion zsh)
